@@ -1,5 +1,5 @@
 import React from "react"
-
+import CharacterCount from "./CharacterCount"
 class NoteInput extends React.Component {
     constructor(props) {
         super(props)
@@ -31,10 +31,10 @@ class NoteInput extends React.Component {
     render() {
         return (
             <form className="note-input" onSubmit={this.onSubmitEventHandler}>
-                <p>Sisa karakter : {this.state.title.trim().length}/50</p>
-                <input type="text" placeholder="Masukkan judul catatan" value={this.state.title} onChange={this.onTitleChangeEventHandler} />
-                <textarea rows={4} cols={50} placeholder="Masukkan deksripsi catatan" value={this.state.body} onChange={this.onBodyChangeEventHandler} />
-                <button type="submit">Tambah</button>
+                <CharacterCount count={this.state.title.trim().length} />
+                <input type="text" placeholder="Masukkan judul catatan" value={this.state.title} onChange={this.onTitleChangeEventHandler} className="note-input__title" />
+                <textarea rows={4} cols={50} placeholder="Masukkan deksripsi catatan" value={this.state.body} onChange={this.onBodyChangeEventHandler} className="note-input__body" />
+                <button type="submit" className="note-input__submit">Tambah</button>
             </form>
         )
     }

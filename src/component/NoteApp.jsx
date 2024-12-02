@@ -2,8 +2,8 @@ import React from "react"
 import { getInitialData } from "../util/index"
 import NoteList from "./NoteList"
 import NoteInput from "./NoteInput"
-import SeaarchButton from "./SearchButton"
-
+import SearchButton from "./SearchButton"
+import "../style/style.css"
 class NoteApp extends React.Component {
     constructor(props) {
         super(props)
@@ -67,19 +67,20 @@ class NoteApp extends React.Component {
     render() {
         return (
             <div className="note-app">
-                <h1>Aplikasi Catatan</h1>
-                <h2>Tambah Catatan</h2>
+                <h1 className="note-app__title">Aplikasi Catatan</h1>
+                <h2 className="note-app__section">Tambah Catatan</h2>
                 <NoteInput addNote={this.onAddNoteHandler} />
-                <SeaarchButton searchByTitle={this.onSearchHandler} />
+                <h2 className="note-app__section">Cari Catatan</h2>
+                <SearchButton searchByTitle={this.onSearchHandler} />
                 {this.state.notes.length !== 0 ? (
-                    <div>
-                        <h1>Daftar Catatan</h1>
+                    <div className="note-app__container">
+                        <h1 className="note-app__section">Daftar Catatan</h1>
                         <NoteList notes={(this.state.notes).filter(note => note.archived !== true)} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
-                        <h1>Arsip</h1>
+                        <h1 className="note-app__section">Arsip</h1>
                         <NoteList notes={(this.state.notes).filter(note => note.archived !== false)} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
                     </div>
                 ) : (
-                    <h1>Tidak ada catatan</h1>
+                    <h1 className="note-app__section">Tidak ada catatan</h1>
                 )}
             </div>
         )

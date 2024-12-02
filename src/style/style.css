@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    color: #252D31;
+    background-color: #F2F2F2;
+    font-family: "Poppins", sans-serif;
+}
+
+.note-app__title {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    padding: 18px 0px 18px 20px;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.note-app__title::after {
+    content: " 📝";
+}
+
+.note-app__section {
+    margin: 40px 0px 22px 0px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.note-input {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 500px;
+    padding: 14px 40px 44px 40px;
+    border-radius: 12px;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    gap: 6px;
+}
+
+.note-input__characterCount {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: gray;
+    font-size: 13px;
+    text-align: right;
+}
+
+.note-input__title {
+    font-size: 13px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.note-input__body {
+    resize: none;
+    padding: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.note-input__submit {
+    margin-top: 6px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.note-search {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-search__input {
+    width: 500px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.note-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.note-item {
+    width: 500px;
+    padding: 20px 26px 44px 40px;
+    display: flex;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    gap: 24px;
+}
+
+.note-item__textContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 8px;
+}
+
+.note-item__buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.note-item__title {
+    margin-bottom: 0;
+}
+
+.note-item__createdAt {
+    color: gray;
+    font-size: 13px;
+    margin: 0;
+}
+
+.note-item__body {
+    margin: 0;
+    font-size: 12px;
+}
+
+.note-item__delete,
+.note-item__archive {
+    cursor: pointer;
+    padding: 4px 8px;
+}
